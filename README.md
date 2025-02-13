@@ -10,7 +10,7 @@ blinking RED is active after the YELLOW to allow the traffic to stop co-operativ
 commanding one direction to stop directly from a GREEN state).
 
 The code includes a Switch Debounce Task which provides for many combinations of switches to
-be used.  The task leaved detected switch change in a Queue where another interested task can
+be used.  The task leaves detected switch changes in a Queue where another interested task can
 check to see the switch state. Any switch combinations and Queues you do not need can be removed to 
 reduce the size of the code.
 
