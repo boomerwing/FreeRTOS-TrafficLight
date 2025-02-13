@@ -10,7 +10,9 @@ blinking RED is active after the YELLOW to allow the traffic to stop co-operativ
 commanding one direction to stop directly from a GREEN state).
 
 The code includes a Switch Debounce Task which provides for many combinations of switches to
-be used.  Any switch combinations you do not need can be removed to reduce the size of the code.
+be used.  The task leaved detected switch change in a Queue where another interested task can
+check to see the switch state. Any switch combinations and Queues you do not need can be removed to 
+reduce the size of the code.
 
 The I/O is implemented through a PCF8575 i2s port extender driving a seven segment LED on my 
 experimental breadboard, although any six LEDs would work.
