@@ -5,46 +5,14 @@ set(PROJECT_NAME "RP2040_FREERTOS_PROJECT")
 set(BUILD_NUMBER "0")
 
 # Set app name(s) and version(s)
-set(APP_1_NAME "PLAY_DEMO")
+
+set(APP_1_NAME "TRAFFIC_LIGHT_DEMO")
 set(APP_1_VERSION_NUMBER "0.1.0")
 
-set(APP_2_NAME "SWITCH_DEMO")
-set(APP_2_VERSION_NUMBER "0.1.0")
-
-set(APP_3_NAME "SHUFFLE_DEMO")
-set(APP_3_VERSION_NUMBER "0.1.0")
-
-set(APP_4_NAME "CWSHUFFLE_DEMO")
-set(APP_4_VERSION_NUMBER "0.1.0")
-
-set(APP_5_NAME "PWMSERVO_DEMO")
-set(APP_5_VERSION_NUMBER "0.1.0")
-
-set(APP_6_NAME "CW_DEMO")
-set(APP_6_VERSION_NUMBER "0.1.0")
-
-set(APP_7_NAME "KEYER_DEMO")
-set(APP_7_VERSION_NUMBER "0.1.0")
-
-set(APP_8_NAME "KBD_DEMO")
-set(APP_8_VERSION_NUMBER "0.1.0")
-
-set(APP_9_NAME "TRAFFIC_LIGHT_DEMO")
-set(APP_9_VERSION_NUMBER "0.1.0")
-
 # Specify the app(s) source code
-set(APP_1_SRC_DIRECTORY "${CMAKE_SOURCE_DIR}/App-Play")
-set(APP_2_SRC_DIRECTORY "${CMAKE_SOURCE_DIR}/App-SW")
-set(APP_3_SRC_DIRECTORY "${CMAKE_SOURCE_DIR}/App-Shuffle")
-set(APP_4_SRC_DIRECTORY "${CMAKE_SOURCE_DIR}/App-CWShuffle")
-set(APP_5_SRC_DIRECTORY "${CMAKE_SOURCE_DIR}/App-PWMServo")
-set(APP_6_SRC_DIRECTORY "${CMAKE_SOURCE_DIR}/App-CWwords")
-set(APP_7_SRC_DIRECTORY "${CMAKE_SOURCE_DIR}/App-Keyer")
-set(APP_8_SRC_DIRECTORY "${CMAKE_SOURCE_DIR}/App-Kbd")
-set(APP_9_SRC_DIRECTORY "${CMAKE_SOURCE_DIR}/App-TrafficLight")
+set(APP_1_SRC_DIRECTORY "${CMAKE_SOURCE_DIR}/App-TrafficLight")
 
 # FROM 1.3.0 -- Move common source code to a separate directory
-# set(COMMON_CODE_DIRECTORY "${CMAKE_SOURCE_DIR}/Common-Feather")
 set(COMMON_CODE_DIRECTORY "${CMAKE_SOURCE_DIR}/Common")
 
 # Set app-side debugging "ON" or "OFF"
@@ -94,14 +62,6 @@ target_include_directories(FreeRTOS PUBLIC
 
 # Include the apps' source code
 add_subdirectory(${APP_1_SRC_DIRECTORY})
-add_subdirectory(${APP_2_SRC_DIRECTORY})
-add_subdirectory(${APP_3_SRC_DIRECTORY})
-add_subdirectory(${APP_4_SRC_DIRECTORY})
-add_subdirectory(${APP_5_SRC_DIRECTORY})
-add_subdirectory(${APP_6_SRC_DIRECTORY})
-add_subdirectory(${APP_7_SRC_DIRECTORY})
-add_subdirectory(${APP_8_SRC_DIRECTORY})
-add_subdirectory(${APP_9_SRC_DIRECTORY})
 
 # Clean up
 unset(FREERTOS_CFG_DIRECTORY)
